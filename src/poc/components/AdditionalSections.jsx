@@ -343,7 +343,7 @@ function AdditionalSections() {
 
       <section id="involved" className="w-full py-24">
         <div className="container-main">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div className="flex flex-col gap-6 mb-12">
             <div>
               <p className="text-[#5C5045] text-sm tracking-[0.4em] uppercase mb-4">Get Involved</p>
               <h2 className="text-[clamp(2rem,4vw,3.4rem)] font-black text-[#110000] leading-[110%]">
