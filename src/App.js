@@ -30,7 +30,7 @@ function useInView(options = {}) {
     }
 
     return () => observer.disconnect()
-  }, [])
+  }, [options])
 
   return [ref, isInView]
 }
