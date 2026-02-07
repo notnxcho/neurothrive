@@ -1,6 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import adaptiveFitnessPattern from '../../assets/adaptive-fitness-pattern-bg.svg'
+import nutritionPattern from '../../assets/nutrition-pattern-bg.svg'
+import wellnessPattern from '../../assets/wellness-pattern-bg.svg'
+import communityPattern from '../../assets/community-pattern-bg.svg'
+import isoNegative from '../../assets/iso-negative.svg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -8,26 +13,26 @@ const SERVICES = [
   {
     title: 'Adaptive Fitness',
     description: 'Personalized movement plans that meet every body where it is and build confidence over time.',
-    accentClass: 'bg-[#F4D6C6]'
+    pattern: adaptiveFitnessPattern
   },
   {
     title: 'Nutrition & Healthy Living',
     description: 'Simple, sensory-friendly nutrition habits that support energy, focus, and daily routines.',
-    accentClass: 'bg-[#E7E1F4]'
+    pattern: nutritionPattern
   },
   {
     title: 'Wellness Education',
     description: 'Skill-building sessions that turn health concepts into practical, repeatable actions.',
-    accentClass: 'bg-[#D6F1E4]'
+    pattern: wellnessPattern
   },
   {
     title: 'Community Wellness',
     description: 'A welcoming environment that builds belonging, social connection, and shared progress.',
-    accentClass: 'bg-[#F3E3BF]'
+    pattern: communityPattern
   }
 ]
 
-function ServiceCard({ title, description, accentClass, highlighted, onMouseEnter, onMouseLeave, cardRef }) {
+function ServiceCard({ title, description, pattern, highlighted, onMouseEnter, onMouseLeave, cardRef }) {
   return (
     <article
       ref={cardRef}
@@ -37,8 +42,32 @@ function ServiceCard({ title, description, accentClass, highlighted, onMouseEnte
         highlighted ? '' : ''
       }`}
     >
+      {/* Base background */}
       <div className="absolute inset-0 bg-[#110000]/10" />
-      <div className={`absolute inset-0 ${accentClass} transition-opacity duration-300 ${highlighted ? 'opacity-100' : 'opacity-0'}`} />
+      
+      {/* White backdrop - reveals when active */}
+      <div 
+        className={`absolute inset-0 bg-white transition-opacity duration-300 ${highlighted ? 'opacity-100' : 'opacity-0'}`}
+      />
+      
+      {/* Pattern background - reveals when active */}
+      <div 
+        className={`absolute inset-0 bg-cover bg-center transition-opacity duration-300 ${highlighted ? 'opacity-100' : 'opacity-0'}`}
+        style={{ backgroundImage: `url(${pattern})` }}
+      />
+      
+      {/* Gradient overlay for readability - white at bottom to transparent at top */}
+      <div 
+        className={`absolute inset-0 bg-gradient-to-t from-white via-white/60 to-transparent transition-opacity duration-300 ${highlighted ? 'opacity-100' : 'opacity-0'}`}
+      />
+      
+      {/* Logo - always visible */}
+      <img 
+        src={isoNegative} 
+        alt="" 
+        className="absolute top-3 left-3 w-8 h-8 z-10"
+      />
+      
       <div className="relative z-10 h-full flex flex-col justify-end items-start p-6 text-left">
         <div className="text-[28px] md:text-[34px] text-[#110000] font-semibold leading-[108%] tracking-tight">
           {title}
@@ -221,7 +250,7 @@ function SolutionSection({ onBackgroundChange }) {
                 key={service.title}
                 title={service.title}
                 description={service.description}
-                accentClass={service.accentClass}
+                pattern={service.pattern}
                 highlighted={spotlightIndex !== null && index === spotlightIndex}
                 onMouseEnter={() => {
                   if (isDesktop) setHoveredIndex(index)

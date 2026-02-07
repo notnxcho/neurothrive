@@ -1,0 +1,29 @@
+<svg width="288" height="432" viewBox="0 0 288 432" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_7220_476)">
+<path d="M72 0V144H0L72 0Z" fill="#E86C00"/>
+<rect x="72" y="72" width="72" height="72" rx="36" fill="#FF9233"/>
+<rect x="216" y="360" width="72" height="72" rx="36" fill="#CC5F00"/>
+<path d="M216 180C216 160.118 232.118 144 252 144C271.882 144 288 160.118 288 180C288 199.882 271.882 216 252 216C232.118 216 216 199.882 216 180Z" fill="#CC5F00"/>
+<rect x="144" y="288" width="72" height="72" rx="36" fill="#CC5F00"/>
+<path d="M72 0L144 72H72V0Z" fill="#CC5F00"/>
+<path d="M72 0L144 72H72V0Z" fill="#CC5F00"/>
+<path d="M144 360H216V432H144V360Z" fill="#FF9233"/>
+<path d="M144 72L216 144H144V72Z" fill="#E86C00"/>
+<path d="M144 216L72 144H144V216Z" fill="#E86C00"/>
+<path d="M0 216L72 144L72 216L0 216Z" fill="#FF9233"/>
+<path d="M288 144L216 72H288V144Z" fill="#E86C00"/>
+<path d="M72 288C32.2355 288 0 255.764 0 216H144C144 255.764 111.764 288 72 288Z" fill="#E86C00"/>
+<rect x="144" y="144" width="72" height="144" fill="#FF9233"/>
+<path d="M0 360H144L72 432H0V360Z" fill="#E86C00"/>
+<path d="M0 288H72V360L0 288Z" fill="#CC5F00"/>
+<path d="M216 360H288V288L216 360Z" fill="#E86C00"/>
+<path d="M216 288H288V216L216 288Z" fill="#E86C00"/>
+<path d="M144 288L72 288L72 360L144 288Z" fill="#FF9233"/>
+<rect x="144" width="144" height="72" fill="#FF9233"/>
+</g>
+<defs>
+<clipPath id="clip0_7220_476">
+<rect width="288" height="432" fill="white"/>
+</clipPath>
+</defs>
+</svg>
