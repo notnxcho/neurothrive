@@ -1,3 +1,72 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for Neuro Thrive Foundation
+# https://neurothrivefoundation.org
+
+# Allow all crawlers
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemap location
+Sitemap: https://neurothrivefoundation.org/sitemap.xml
+
+# LLMS.txt for AI language models
+# https://neurothrivefoundation.org/llms.txt
+
+# Crawl delay (optional, be respectful to servers)
+Crawl-delay: 1
+
+# Block common non-content paths (if applicable)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /static/js/*.map
+Disallow: /static/css/*.map
+
+# Allow important resources for rendering
+Allow: /static/
+Allow: /*.js
+Allow: /*.css
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.svg
+Allow: /*.ico
+
+# Specific bot rules
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+
+User-agent: ChatGPT-User
+Allow: /
+Allow: /llms.txt
+
+User-agent: Claude-Web
+Allow: /
+Allow: /llms.txt
+
+User-agent: Anthropic-AI
+Allow: /
+Allow: /llms.txt
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /

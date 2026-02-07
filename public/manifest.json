@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Neuro Thrive",
+  "name": "Neuro Thrive Foundation",
+  "description": "Empowering neurodivergent youth and adults through adaptive fitness, wellness, and community.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,16 +11,40 @@
     {
       "src": "logo192.png",
       "type": "image/png",
-      "sizes": "192x192"
+      "sizes": "192x192",
+      "purpose": "any maskable"
     },
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "orientation": "portrait-primary",
+  "theme_color": "#110000",
+  "background_color": "#F5F0E8",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr",
+  "categories": ["health", "fitness", "education", "nonprofit"],
+  "shortcuts": [
+    {
+      "name": "Programs",
+      "short_name": "Programs",
+      "description": "View our adaptive fitness and wellness programs",
+      "url": "/#programs",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Get Involved",
+      "short_name": "Involve",
+      "description": "Donate, volunteer, or partner with us",
+      "url": "/#involved",
+      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
 }

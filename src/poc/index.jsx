@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import SEO from '../components/SEO'
 import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import ProblemSection from './components/ProblemSection'
@@ -82,6 +83,7 @@ function POCPage() {
       ref={pageRef} 
       className="poc-page min-h-screen flex flex-col items-center relative"
     >
+      <SEO />
       {/* Fixed background layer that changes based on scroll */}
       <div 
         className={`fixed inset-0 transition-all duration-700 -z-10 ${bgClass}`}
