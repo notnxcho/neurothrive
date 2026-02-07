@@ -9,13 +9,13 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "logo512.png",
+      "src": "android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any maskable"
@@ -36,14 +36,14 @@
       "short_name": "Programs",
       "description": "View our adaptive fitness and wellness programs",
       "url": "/#programs",
-      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "android-chrome-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "Get Involved",
       "short_name": "Involve",
       "description": "Donate, volunteer, or partner with us",
       "url": "/#involved",
-      "icons": [{ "src": "logo192.png", "sizes": "192x192" }]
+      "icons": [{ "src": "android-chrome-192x192.png", "sizes": "192x192" }]
     }
   ],
   "prefer_related_applications": false
