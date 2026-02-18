@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Apple, Book, Community, Gym, HandCard, Heart, Mail } from 'iconoir-react'
+import FoundersSection from './FoundersSection'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -340,6 +341,8 @@ function AdditionalSections() {
           </div>
         </div>
       </section>
+
+      <FoundersSection />
 
       <section id="involved" className="w-full py-24">
         <div className="container-main">

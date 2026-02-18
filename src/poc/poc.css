@@ -12,6 +12,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Minimal scrollbar — all scrollable elements */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(17, 0, 0, 0.08) transparent;
+}
+
 /* Remove default margins */
 .poc-page {
   margin: 0;
@@ -20,29 +26,10 @@ html {
   overflow-x: hidden;
 }
 
-
 /* Selection color */
 .poc-page ::selection {
   background-color: rgba(61, 42, 31, 0.3);
   color: inherit;
-}
-
-/* Custom scrollbar for webkit browsers */
-.poc-page::-webkit-scrollbar {
-  width: 8px;
-}
-
-.poc-page::-webkit-scrollbar-track {
-  background: #F5F0E8;
-}
-
-.poc-page::-webkit-scrollbar-thumb {
-  background: #3D2A1F;
-  border-radius: 4px;
-}
-
-.poc-page::-webkit-scrollbar-thumb:hover {
-  background: #2A1810;
 }
 
 /* Paint effect text lines - initial state */
