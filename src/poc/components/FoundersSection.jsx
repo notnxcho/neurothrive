@@ -1,14 +1,16 @@
 import { useState, useEffect, useCallback } from 'react'
-import { Xmark, Linkedin, OpenNewWindow, MapPin } from 'iconoir-react'
+import { Xmark, Linkedin, Instagram, OpenNewWindow, MapPin } from 'iconoir-react'
+import melanieImg from '../../assets/melanie.jpg'
+import uziImg from '../../assets/uzi.jpg'
 
 const FOUNDERS = [
   {
     name: 'Melanie Castro',
     credentials: 'M.S., BCBA',
     role: 'Co-Founder',
-    image: null,
+    image: melanieImg,
     accentClass: 'bg-[#F2D8C4]',
-    linkedin: 'https://www.linkedin.com/in/melanie-castro-bcba/',
+    instagram: 'https://instagram.com/fit_mel_ba',
     location: 'San Francisco, CA',
     bio: [
       'Co-Founder and Board Certified Behavior Analyst with 14+ years of clinical leadership in applied behavior analysis (ABA), Acceptance and Commitment Therapy (ACT), and adaptive fitness program development.',
@@ -30,7 +32,7 @@ const FOUNDERS = [
     name: 'Uzi Sasson',
     credentials: 'CPA',
     role: 'Co-Founder & CEO',
-    image: null,
+    image: uziImg,
     accentClass: 'bg-[#DCE3F2]',
     linkedin: 'https://www.linkedin.com/in/uzi-sasson/',
     location: 'San Francisco, CA',
@@ -214,20 +216,37 @@ function FounderModal({ founder, isOpen, onClose }) {
               </div>
             )}
 
-            {founder.linkedin && (
+            {(founder.linkedin || founder.instagram) && (
               <div className="rounded-[20px] bg-[#11000008] p-6">
                 <p className="text-[14px] font-semibold text-[#110000] mb-3">Social</p>
-                <a
-                  href={founder.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2.5 group"
-                >
-                  <span className="w-9 h-9 rounded-full bg-[#0A66C2] flex items-center justify-center">
-                    <Linkedin className="w-[18px] h-[18px] text-white" />
-                  </span>
-                  <OpenNewWindow className="w-3.5 h-3.5 text-[#5C5045] opacity-0 group-hover:opacity-100 transition-opacity" />
-                </a>
+                <div className="flex items-center gap-3">
+                  {founder.linkedin && (
+                    <a
+                      href={founder.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2.5 group"
+                    >
+                      <span className="w-9 h-9 rounded-full bg-[#0A66C2] flex items-center justify-center">
+                        <Linkedin className="w-[18px] h-[18px] text-white" />
+                      </span>
+                      <OpenNewWindow className="w-3.5 h-3.5 text-[#5C5045] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                  )}
+                  {founder.instagram && (
+                    <a
+                      href={founder.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2.5 group"
+                    >
+                      <span className="w-9 h-9 rounded-full bg-gradient-to-br from-[#F58529] via-[#DD2A7B] to-[#8134AF] flex items-center justify-center">
+                        <Instagram className="w-[18px] h-[18px] text-white" />
+                      </span>
+                      <OpenNewWindow className="w-3.5 h-3.5 text-[#5C5045] opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </a>
+                  )}
+                </div>
               </div>
             )}
           </div>
