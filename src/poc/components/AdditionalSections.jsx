@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Apple, Book, Community, Gym, HandCard, Heart, Mail } from 'iconoir-react'
 import FoundersSection from './FoundersSection'
+import PhotoGridCarousel from './PhotoGridCarousel'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -329,6 +330,8 @@ function AdditionalSections() {
           </div>
         </div>
       </section>
+
+      <PhotoGridCarousel />
 
       <section className="w-full py-24">
         <div className="container-main">

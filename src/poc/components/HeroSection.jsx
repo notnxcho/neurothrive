@@ -28,28 +28,20 @@ function HeroSection() {
       }
     })
 
-    // Fade the gradient panel as the next section comes in
+    // Grow the hero curtain as the next section (intro video) comes in.
+    // We tween width + borderRadius so the rounded slab progressively
+    // becomes a full-bleed panel that covers the viewport.
     if (gradient) {
       gsap.to(gradient, {
-        // opacity: 0,
-        bottom: "-100vh",
-        // onUpdate: () => {
-        //   const element = gradientRef.current
-        //   if (!element) return
-
-        //   const viewportWidth = window.innerWidth || 1
-        //   const elementWidth = element.offsetWidth || 1
-        //   const scaleFactor = elementWidth / viewportWidth
-
-        //   element.style.transform = `scaleX(${scaleFactor})`
-        // },
+        bottom: '-100vh',
         height: '200vh',
         width: '100vw',
         maxWidth: '100vw',
+        borderRadius: 0,
         scrollTrigger: {
-          trigger: '#problem',
+          trigger: '#intro-video',
           start: 'top bottom',
-          end: 'top top',
+          end: 'top 75%',
           scrub: 1,
         }
       })
@@ -100,7 +92,7 @@ function HeroSection() {
       </div>
       <div 
         ref={gradientRef}
-        className="absolute -bottom-[calc(100vh-(10vh+40px))] container-main h-[100vh] w-full bg-gradient-to-t from-[#360F0F] to-[#170808] rounded-[24px] z-[-1]"
+        className="absolute left-1/2 -translate-x-1/2 -bottom-[calc(100vh-(10vh+40px))] w-[calc(100vw-48px)] md:w-[calc(100vw-24px)] max-w-[1200px] h-[100vh] bg-gradient-to-t from-[#2D080Baa] to-[#360f0f] rounded-[24px] z-[-1]"
       />
     </section>
   )
